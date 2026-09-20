@@ -390,6 +390,91 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
 .supuestos strong { font-family: var(--titulos); font-weight: 700; }
 .afuera { margin-top: 2rem; color: var(--muted); font-size: 1rem; }
 
+/* ---------- Galería ---------- */
+.col-ancha {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+.galeria a {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.galeria img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.85rem;
+  background: #fff;
+  transition: transform 0.25s ease;
+}
+.galeria a:hover img, .galeria a:focus-visible img { transform: scale(1.06); }
+.galeria a:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+@media (min-width: 560px) { .galeria { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 860px) { .galeria { grid-template-columns: repeat(4, 1fr); gap: 0.85rem; } }
+
+/* ---------- Visor de fotos (lightbox) ---------- */
+.visor {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 16, 20, 0.94);
+  padding: 3.5rem 1rem;
+}
+.visor[hidden] { display: none; }
+.visor figure { margin: 0; max-width: 100%; }
+.visor img {
+  display: block;
+  margin: 0 auto;
+  max-width: min(92vw, 44rem);
+  max-height: 74vh;
+  width: auto;
+  height: auto;
+  background: #fff;
+  padding: 1rem;
+}
+.visor figcaption {
+  margin-top: 0.85rem;
+  text-align: center;
+  color: var(--paper);
+  font: 600 0.85rem/1.3 var(--titulos);
+  letter-spacing: 0.04em;
+}
+.visor-boton {
+  background: transparent;
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  padding: 0.6rem;
+}
+.visor-boton:hover { color: var(--gold); }
+.visor-cerrar { position: absolute; top: 0.75rem; right: 0.75rem; }
+.visor-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.visor-prev { left: 0.25rem; }
+.visor-next { right: 0.25rem; }
+@media (min-width: 620px) {
+  .visor-prev { left: 1rem; }
+  .visor-next { right: 1rem; }
+}
+
 /* ---------- Pie ---------- */
 .pie {
   border-top: 1px solid var(--gold);
