@@ -23,25 +23,25 @@
   });
 })();
 
-/* Galería: visor de fotos a pantalla completa con navegación anterior/siguiente. */
+/* Tienda: visor de fotos a pantalla completa con navegación anterior/siguiente. */
 (function () {
-  var galeria = document.getElementById('galeria');
+  var tienda = document.getElementById('tienda');
   var visor = document.getElementById('visor');
-  if (!galeria || !visor) return;
+  if (!tienda || !visor) return;
 
-  var enlaces = Array.prototype.slice.call(galeria.querySelectorAll('a'));
+  var botones = Array.prototype.slice.call(tienda.querySelectorAll('.ver-foto'));
   var visorImg = document.getElementById('visor-img');
   var contador = document.getElementById('visor-contador');
   var indice = 0;
   var disparador = null;
 
   function mostrar(i) {
-    indice = (i + enlaces.length) % enlaces.length;
-    var enlace = enlaces[indice];
-    var img = enlace.querySelector('img');
-    visorImg.src = enlace.getAttribute('href');
+    indice = (i + botones.length) % botones.length;
+    var boton = botones[indice];
+    var img = boton.querySelector('img');
+    visorImg.src = boton.getAttribute('data-src');
     visorImg.alt = img ? img.alt : '';
-    contador.textContent = (indice + 1) + ' de ' + enlaces.length;
+    contador.textContent = (indice + 1) + ' de ' + botones.length;
   }
 
   function abrir(i, origen) {
@@ -59,10 +59,9 @@
     if (disparador) disparador.focus();
   }
 
-  enlaces.forEach(function (enlace, i) {
-    enlace.addEventListener('click', function (e) {
-      e.preventDefault();
-      abrir(i, enlace);
+  botones.forEach(function (boton, i) {
+    boton.addEventListener('click', function () {
+      abrir(i, boton);
     });
   });
 

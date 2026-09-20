@@ -463,6 +463,74 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
 .galeria a.galeria-mas { display: none; }
 @media (min-width: 560px) { .galeria a.galeria-mas { display: block; } }
 
+/* Insignia de precio sobre las fotos del adelanto en Inicio */
+.galeria a { display: block; }
+.precio-mini {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  z-index: 1;
+  background: var(--ink);
+  color: var(--paper);
+  font: 700 0.78rem/1 var(--titulos);
+  padding: 0.3rem 0.5rem;
+}
+
+/* ---------- Tienda ---------- */
+.tienda {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 560px) { .tienda { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 860px) { .tienda { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; } }
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.foto-producto {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  padding: 0.85rem;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  cursor: zoom-in;
+  overflow: hidden;
+}
+.foto-producto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.85rem;
+  transition: transform 0.25s ease;
+}
+.foto-producto:hover img, .foto-producto:focus-visible img { transform: scale(1.06); }
+.foto-producto:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+
+.producto .info { padding: 1rem 1.1rem 1.25rem; display: flex; flex-direction: column; flex-grow: 1; }
+.producto h3 { font-size: 1rem; line-height: 1.25; margin: 0 0 0.5rem; }
+.producto .precio {
+  font: 800 1.2rem/1 var(--titulos);
+  color: var(--gold-deep);
+  margin: 0 0 1rem;
+}
+.producto .boton {
+  margin-top: auto;
+  width: 100%;
+  min-height: 2.7rem;
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+}
+
 /* ---------- Visor de fotos (lightbox) ---------- */
 .visor {
   position: fixed;
