@@ -274,6 +274,41 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
 .liso { background: var(--paper-2); }
 .oscuro { background: var(--ink); color: var(--paper); }
 
+/* ---------- Portada (hero) ---------- */
+.hero { padding: 3rem 0 3.5rem; overflow: hidden; }
+.hero .dentro { max-width: var(--ancho-max); margin: 0 auto; padding: 0 1.25rem; }
+.hero-texto { max-width: var(--ancho-col); }
+.hero-fotos {
+  position: relative;
+  height: 15rem;
+  margin: 3.5rem auto 0;
+  max-width: 22rem;
+}
+.hero-fotos::before {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  background: radial-gradient(closest-side, rgba(198, 159, 68, 0.28), transparent 72%);
+  z-index: 0;
+}
+.hf {
+  position: absolute;
+  width: 54%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
+  padding: 0.9rem;
+  box-shadow: 0 1.25rem 2.75rem rgba(0, 0, 0, 0.45);
+}
+.hf-1 { left: 2%; top: 18%; z-index: 3; transform: rotate(-5deg); }
+.hf-2 { right: 0; top: 0; z-index: 2; width: 46%; transform: rotate(6deg); }
+.hf-3 { left: 22%; bottom: 0; z-index: 1; width: 42%; transform: rotate(-3deg); }
+@media (min-width: 720px) {
+  .hero { padding: 4.5rem 0 5rem; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3rem; align-items: center; }
+  .hero-fotos { height: 22rem; max-width: none; margin: 0; }
+}
+
 /* ---------- Fotos a todo el ancho ---------- */
 .foto {
   --ar: 4 / 3;
