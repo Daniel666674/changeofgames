@@ -424,6 +424,10 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
 @media (min-width: 560px) { .galeria { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 860px) { .galeria { grid-template-columns: repeat(4, 1fr); gap: 0.85rem; } }
 
+/* En el adelanto de la galería en Inicio, algunas fotos solo se ven desde tablet */
+.galeria a.galeria-mas { display: none; }
+@media (min-width: 560px) { .galeria a.galeria-mas { display: block; } }
+
 /* ---------- Visor de fotos (lightbox) ---------- */
 .visor {
   position: fixed;
