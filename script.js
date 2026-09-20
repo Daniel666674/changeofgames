@@ -23,17 +23,24 @@
   });
 })();
 
-/* Tienda: visor de fotos a pantalla completa con navegación anterior/siguiente. */
+/* Fotos de producto: visor a pantalla completa con navegación anterior/siguiente. */
 (function () {
-  var tienda = document.getElementById('tienda');
+  var fotos = document.querySelector('.visor-fotos');
   var visor = document.getElementById('visor');
-  if (!tienda || !visor) return;
+  if (!fotos || !visor) return;
 
-  var botones = Array.prototype.slice.call(tienda.querySelectorAll('.ver-foto'));
+  var botones = Array.prototype.slice.call(fotos.querySelectorAll('.ver-foto'));
   var visorImg = document.getElementById('visor-img');
   var contador = document.getElementById('visor-contador');
+  var prev = document.getElementById('visor-prev');
+  var next = document.getElementById('visor-next');
   var indice = 0;
   var disparador = null;
+
+  if (botones.length <= 1) {
+    prev.hidden = true;
+    next.hidden = true;
+  }
 
   function mostrar(i) {
     indice = (i + botones.length) % botones.length;
@@ -66,8 +73,8 @@
   });
 
   document.getElementById('visor-cerrar').addEventListener('click', cerrar);
-  document.getElementById('visor-prev').addEventListener('click', function () { mostrar(indice - 1); });
-  document.getElementById('visor-next').addEventListener('click', function () { mostrar(indice + 1); });
+  prev.addEventListener('click', function () { mostrar(indice - 1); });
+  next.addEventListener('click', function () { mostrar(indice + 1); });
 
   visor.addEventListener('click', function (e) {
     if (e.target === visor) cerrar();
