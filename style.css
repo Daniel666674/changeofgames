@@ -1,0 +1,426 @@
+/* Change of Games — propuesta de sitio · dirección editorial
+   Colores tomados del logo: negro, dorado y rojo de la gorra. */
+
+:root {
+  --ink: #0c1014;
+  --paper: #f5f2ec;
+  --paper-2: #ebe6db;
+  --gold: #c69f44;
+  --gold-deep: #7d5d17;
+  --red: #b23a26;
+  --red-dark: #8f2d1c;
+  --muted: #4a4f55;
+  --line: rgba(12, 16, 20, 0.22);
+  --line-light: rgba(245, 242, 236, 0.28);
+  --titulos: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --texto: "Lora", Georgia, "Times New Roman", serif;
+  --ancho-col: 36rem;
+  --ancho-max: 64rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.125rem/1.7 var(--texto);
+  padding-bottom: 5rem; /* espacio para el botón fijo de WhatsApp en el celular */
+}
+
+img { display: block; max-width: 100%; }
+
+a {
+  color: inherit;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+}
+a:hover { text-decoration-color: var(--red); }
+
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.salto {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.75rem 1rem;
+  font: 600 0.95rem var(--titulos);
+  z-index: 50;
+}
+.salto:focus { left: 0; }
+
+/* ---------- Franja de propuesta ---------- */
+.franja {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font: 500 0.78rem/1.45 var(--titulos);
+}
+.franja p {
+  margin: 0 auto;
+  max-width: var(--ancho-max);
+  padding: 0.5rem 1.25rem;
+}
+.franja a { color: var(--ink); }
+
+/* ---------- Encabezado ---------- */
+.cab {
+  position: relative;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.cab .dentro {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  font: 800 1.1rem/1 var(--titulos);
+  letter-spacing: 0.005em;
+}
+.marca img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+}
+
+.menu { flex-basis: 100%; }
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu li a:not(.boton) {
+  display: block;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  font: 600 1.05rem/1.2 var(--titulos);
+  text-decoration: none;
+}
+.menu li a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.35em;
+}
+.menu li.accion { padding-top: 0.75rem; }
+
+/* Menú hamburguesa en celular (solo si hay JavaScript; sin él, el menú queda visible) */
+@media (max-width: 859px) {
+  .js .menu-btn { display: inline-flex; }
+  .js .menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 30;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 0 1.25rem 1.25rem;
+  }
+  .js .menu.abierto { display: block; }
+}
+
+@media (min-width: 860px) {
+  .cab .dentro { flex-wrap: nowrap; padding-block: 0.9rem; }
+  .menu { flex-basis: auto; }
+  .menu ul { flex-direction: row; align-items: center; gap: 2rem; }
+  .menu li a:not(.boton) { border-top: 0; padding: 0.4rem 0; font-size: 0.98rem; }
+  .menu li.accion { padding-top: 0; }
+  .menu .boton { min-height: 2.6rem; padding: 0 1.1rem; font-size: 0.95rem; }
+  body { padding-bottom: 0; }
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0 1.4rem;
+  background: var(--red);
+  color: #fff;
+  border: 1.5px solid var(--red);
+  border-radius: 0;
+  font: 600 1rem/1.2 var(--titulos);
+  text-decoration: none;
+  cursor: pointer;
+}
+.boton:hover { background: var(--red-dark); border-color: var(--red-dark); }
+.boton svg { flex: none; }
+
+.boton.linea {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.boton.linea:hover { background: var(--ink); color: var(--paper); }
+
+.oscuro .boton.linea { color: var(--paper); border-color: var(--paper); }
+.oscuro .boton.linea:hover { background: var(--paper); color: var(--ink); }
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+/* WhatsApp fijo, solo en celular */
+.wa-fijo {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  min-height: 3.25rem;
+  padding: 0 1.25rem;
+}
+@media (min-width: 860px) { .wa-fijo { display: none; } }
+
+/* ---------- Tipografía ---------- */
+h1, h2, h3 {
+  font-family: var(--titulos);
+  color: var(--ink);
+  margin: 0;
+}
+h1 {
+  font-weight: 800;
+  font-size: clamp(2.4rem, 10.5vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+h2 {
+  font-weight: 700;
+  font-size: clamp(1.75rem, 6.5vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.018em;
+}
+h3 { font-weight: 700; font-size: 1.3rem; line-height: 1.2; }
+
+.oscuro h1, .oscuro h2, .oscuro h3 { color: var(--paper); }
+
+.sobre {
+  margin: 0 0 1rem;
+  font: 600 0.78rem/1.3 var(--titulos);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.oscuro .sobre { color: var(--gold); }
+
+p { margin: 0 0 1.1rem; }
+p:last-child { margin-bottom: 0; }
+
+.entrada { font-size: 1.25rem; line-height: 1.6; }
+
+h1 + p, h2 + p { margin-top: 1.5rem; }
+
+.marca-sup { font: 600 0.8em/1 var(--titulos); vertical-align: super; margin-left: 0.15em; }
+.marca-sup a { color: var(--red); text-decoration: none; }
+
+/* ---------- Estructura ---------- */
+.col {
+  max-width: var(--ancho-col);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.bloque { padding: 3.5rem 0; }
+.bloque.con-linea > .col::before {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--line);
+  margin-bottom: 3rem;
+}
+
+.liso { background: var(--paper-2); }
+.oscuro { background: var(--ink); color: var(--paper); }
+
+/* ---------- Fotos a todo el ancho ---------- */
+.foto {
+  --ar: 4 / 3;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  aspect-ratio: var(--ar);
+  max-height: 80vh;
+  background: #1c2229;
+  overflow: hidden;
+}
+.foto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foto.portada { --ar: 4 / 5; }
+.foto.vacia::after {
+  content: "Foto pendiente · " attr(data-src);
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1rem;
+  color: var(--gold);
+  font: 500 0.8rem/1.3 var(--titulos);
+  letter-spacing: 0.04em;
+}
+@media (min-width: 700px) {
+  .foto { --ar: 16 / 9; }
+  .foto.portada { --ar: 16 / 8; }
+}
+
+/* ---------- Lista con líneas ---------- */
+.lista {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+}
+.lista li {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+}
+.lista .n {
+  font: 600 0.85rem/2.1 var(--titulos);
+  letter-spacing: 0.08em;
+  color: var(--gold-deep);
+}
+.lista h3 { margin-bottom: 0.3rem; }
+.lista h3 a { text-decoration: none; }
+.lista h3 a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
+.lista p { margin: 0; }
+
+/* ---------- Horario ---------- */
+.horas { margin: 1.75rem 0 0; padding: 0; }
+.horas div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+}
+.horas div:last-child { border-bottom: 1px solid var(--line); }
+.horas dt { font: 600 1rem/1.4 var(--titulos); }
+.horas dd { margin: 0; }
+.oscuro .horas div { border-color: var(--line-light); }
+
+/* ---------- Logo en Nosotros ---------- */
+.con-sello { display: grid; gap: 1.5rem; }
+.sello { width: 8.5rem; height: 8.5rem; border-radius: 50%; }
+@media (min-width: 620px) {
+  .con-sello { grid-template-columns: 8.5rem 1fr; gap: 2rem; align-items: start; }
+}
+
+/* ---------- Pasos ---------- */
+.pasos { list-style: none; margin: 2rem 0 0; padding: 0; counter-reset: paso; }
+.pasos li {
+  counter-increment: paso;
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.pasos li:last-child { border-bottom: 1px solid var(--line); }
+.pasos li::before {
+  content: "0" counter(paso);
+  font: 600 0.85rem/2.1 var(--titulos);
+  letter-spacing: 0.08em;
+  color: var(--gold-deep);
+}
+
+/* ---------- Mapa ---------- */
+.mapa {
+  display: block;
+  width: 100%;
+  height: 22rem;
+  border: 0;
+  filter: grayscale(1);
+  background: var(--paper-2);
+}
+@media (min-width: 700px) { .mapa { height: 28rem; } }
+
+/* ---------- Supuestos ---------- */
+.supuestos { margin: 2rem 0 0; padding: 0; list-style: none; }
+.supuestos li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.supuestos li:last-child { border-bottom: 1px solid var(--line); }
+.supuestos strong { font-family: var(--titulos); font-weight: 700; }
+.afuera { margin-top: 2rem; color: var(--muted); font-size: 1rem; }
+
+/* ---------- Pie ---------- */
+.pie {
+  border-top: 1px solid var(--gold);
+  background: var(--paper);
+  padding: 3rem 0 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.pie .dentro {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: grid;
+  gap: 2rem;
+}
+.pie h2 {
+  margin: 0 0 0.6rem;
+  font: 600 0.75rem/1.3 var(--titulos);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.pie p { margin: 0 0 0.4rem; }
+.pie .marca { margin-bottom: 0.9rem; }
+.pie .nota {
+  grid-column: 1 / -1;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+@media (min-width: 760px) {
+  .pie .dentro { grid-template-columns: 1.2fr 1fr 1fr; gap: 2.5rem; }
+}
