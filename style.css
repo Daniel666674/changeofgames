@@ -204,16 +204,17 @@ a:hover { text-decoration-color: var(--red); }
   margin-top: 1.75rem;
 }
 
-/* WhatsApp fijo, solo en celular */
+/* WhatsApp fijo: visible siempre, en celular y escritorio */
 .wa-fijo {
   position: fixed;
-  right: 1rem;
-  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  right: 1.25rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
   z-index: 40;
   min-height: 3.25rem;
-  padding: 0 1.25rem;
+  padding: 0 1.35rem;
+  box-shadow: 0 0.75rem 1.75rem rgba(12, 16, 20, 0.28);
 }
-@media (min-width: 860px) { .wa-fijo { display: none; } }
+.wa-fijo:hover { box-shadow: 0 0.9rem 2rem rgba(12, 16, 20, 0.34); }
 
 /* ---------- Tipografía ---------- */
 h1, h2, h3 {
@@ -308,6 +309,47 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
   .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3rem; align-items: center; }
   .hero-fotos { height: 22rem; max-width: none; margin: 0; }
 }
+
+.aviso-hero {
+  margin: 1.25rem 0 0;
+  font: 600 0.85rem/1.4 var(--titulos);
+  color: var(--gold);
+}
+
+/* ---------- Estadísticas ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.stats > div { display: flex; flex-direction: column; gap: 0.3rem; }
+.stat-num { font: 800 clamp(1.6rem, 6vw, 2.4rem) / 1 var(--titulos); color: var(--gold-deep); }
+.stat-label {
+  font: 600 0.78rem/1.3 var(--titulos);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Cuadrícula "por qué comprar aquí" ---------- */
+.confianza-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+@media (min-width: 620px) { .confianza-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .confianza-grid { grid-template-columns: repeat(4, 1fr); } }
+.confianza-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.confianza-card:hover { box-shadow: 0 0.85rem 1.75rem rgba(12, 16, 20, 0.1); transform: translateY(-2px); }
+.confianza-card svg { color: var(--gold-deep); margin-bottom: 0.85rem; }
+.confianza-card h3 { font-size: 1.02rem; margin-bottom: 0.5rem; }
+.confianza-card p { font-size: 0.92rem; color: var(--muted); margin: 0; }
 
 /* ---------- Fotos a todo el ancho ---------- */
 .foto {
@@ -476,6 +518,27 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
   padding: 0.3rem 0.5rem;
 }
 
+/* ---------- Filtros de la tienda ---------- */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+.chip {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  font: 600 0.88rem/1 var(--titulos);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+.chip span { color: var(--muted); font-weight: 500; }
+.chip:hover { border-color: var(--ink); }
+.chip.activo { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.chip.activo span { color: var(--gold); }
+.sin-resultados { padding: 2rem 0; color: var(--muted); }
+
 /* ---------- Tienda ---------- */
 .tienda {
   display: grid;
@@ -490,6 +553,12 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
   flex-direction: column;
   background: #fff;
   border: 1px solid var(--line);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.producto[hidden] { display: none; }
+.producto:hover {
+  box-shadow: 0 0.85rem 1.75rem rgba(12, 16, 20, 0.12);
+  transform: translateY(-2px);
 }
 .foto-producto {
   position: relative;
@@ -558,6 +627,7 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
   margin: 0;
   cursor: zoom-in;
   overflow: hidden;
+  box-shadow: 0 1rem 2.5rem rgba(12, 16, 20, 0.1);
 }
 .foto-grande img {
   position: absolute;
@@ -589,11 +659,25 @@ h1 + p, h2 + p { margin-top: 1.5rem; }
 }
 .foto-grande:focus-visible, .foto-mini:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
 
+.precio-fila { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem; margin: 1rem 0 1.25rem; }
 .precio-grande {
   font: 800 2.1rem/1 var(--titulos);
   color: var(--gold-deep);
-  margin: 1rem 0 1.25rem;
+  margin: 0;
 }
+.etiqueta-disponible {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(198, 159, 68, 0.14);
+  color: var(--gold-deep);
+  border: 1px solid rgba(198, 159, 68, 0.4);
+  font: 700 0.8rem/1 var(--titulos);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.65rem;
+}
+.etiqueta-disponible svg { width: 14px; height: 14px; }
 
 .confianza { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.7rem; }
 .confianza li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.95rem; line-height: 1.4; }

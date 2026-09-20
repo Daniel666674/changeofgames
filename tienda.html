@@ -7,6 +7,17 @@
 <meta name="theme-color" content="#0c1014">
 <title>Tienda — Change of Games</title>
 <meta name="description" content="Consolas, controles y accesorios con precio, descripción y forma de pago. Change of Games, Bogotá.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Change of Games">
+<meta property="og:title" content="Tienda — Change of Games">
+<meta property="og:description" content="Consolas, controles y accesorios con precio, descripción y forma de pago. Change of Games, Bogotá.">
+<meta property="og:url" content="https://daniel666674.github.io/changeofgames/tienda.html">
+<meta property="og:image" content="https://daniel666674.github.io/changeofgames/img/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tienda — Change of Games">
+<meta name="twitter:description" content="Consolas, controles y accesorios con precio, descripción y forma de pago. Change of Games, Bogotá.">
+<meta name="twitter:image" content="https://daniel666674.github.io/changeofgames/img/logo.png">
 <link rel="icon" href="img/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +41,7 @@
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="tienda.html" aria-current="page">Tienda</a></li>
           <li><a href="contacto.html">Contacto</a></li>
-          <li class="accion"><a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">Escríbenos</a></li>
+          <li class="accion"><a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Escríbenos</a></li>
       </ul>
     </nav>
   </div>
@@ -48,8 +59,14 @@
 
 <section class="bloque">
   <div class="col-ancha">
-    <div class="tienda">
-      <article class="producto">
+    <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría">
+      <button type="button" class="chip" data-filtro="todos" aria-pressed="true">Todos <span>(18)</span></button>
+      <button type="button" class="chip" data-filtro="Consola" aria-pressed="false">Consolas <span>(8)</span></button>
+      <button type="button" class="chip" data-filtro="Control" aria-pressed="false">Controles <span>(9)</span></button>
+      <button type="button" class="chip" data-filtro="Audífonos" aria-pressed="false">Audífonos <span>(1)</span></button>
+    </div>
+    <div class="tienda" id="tienda">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="playstation-5.html"><img src="img/122bd800-77e7-4d29-a37b-c95b49364a4b.jpg" alt="PlayStation 5" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="playstation-5.html">PlayStation 5</a></h3>
@@ -57,7 +74,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20PlayStation%205%20%28%242.499.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="playstation-5-hub-usb.html"><img src="img/d7b2c313-ddb9-4fe3-a463-bd3f74243330.jpg" alt="PlayStation 5 + base con hub USB" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="playstation-5-hub-usb.html">PlayStation 5 + base con hub USB</a></h3>
@@ -65,7 +82,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20PlayStation%205%20%2B%20base%20con%20hub%20USB%20%28%242.699.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="xbox-series-x.html"><img src="img/1f68ad1a-35a1-4e7f-af75-7a72c74c7367.jpg" alt="Xbox Series X" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="xbox-series-x.html">Xbox Series X</a></h3>
@@ -73,7 +90,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Xbox%20Series%20X%20%28%242.399.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="xbox-series-x-edicion-limitada.html"><img src="img/680e57be-d688-4080-a77d-826a2f2ee2a0.jpg" alt="Xbox Series X Edición Limitada" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="xbox-series-x-edicion-limitada.html">Xbox Series X Edición Limitada</a></h3>
@@ -81,7 +98,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Xbox%20Series%20X%20Edici%C3%B3n%20Limitada%20%28%242.599.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="xbox-series-s.html"><img src="img/98a2825f-ee8b-4576-b7fa-15a7480c7faf.jpg" alt="Xbox Series S" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="xbox-series-s.html">Xbox Series S</a></h3>
@@ -89,7 +106,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Xbox%20Series%20S%20%28%241.499.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="nintendo-switch.html"><img src="img/3e18d4f3-05dc-426b-acea-a320eca15b04.jpg" alt="Nintendo Switch" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="nintendo-switch.html">Nintendo Switch</a></h3>
@@ -97,7 +114,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Nintendo%20Switch%20%28%241.299.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="playstation-4-slim.html"><img src="img/ae0ecc8f-9b37-4b0d-a136-ed9568defed2.jpg" alt="PlayStation 4 Slim" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="playstation-4-slim.html">PlayStation 4 Slim</a></h3>
@@ -105,7 +122,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20PlayStation%204%20Slim%20%28%241.199.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Consola">
         <a class="foto-producto" href="xbox-one-s.html"><img src="img/bdeb9dff-286d-4767-8537-f9da5c85b6cd.jpg" alt="Xbox One S" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="xbox-one-s.html">Xbox One S</a></h3>
@@ -113,7 +130,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Xbox%20One%20S%20%28%24999.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-dualsense-negro.html"><img src="img/98239718-8c9b-42d4-9835-1d1d68dedd41.jpg" alt="Control DualSense PS5 (negro medianoche)" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-dualsense-negro.html">Control DualSense PS5 (negro medianoche)</a></h3>
@@ -121,7 +138,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20DualSense%20PS5%20%28negro%20medianoche%29%20%28%24379.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-dualsense-blanco.html"><img src="img/b1ddb0ec-ac0d-4758-bd5f-0c2a08fdcad8.jpg" alt="Control DualSense PS5 (blanco)" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-dualsense-blanco.html">Control DualSense PS5 (blanco)</a></h3>
@@ -129,7 +146,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20DualSense%20PS5%20%28blanco%29%20%28%24379.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-dualsense-camuflado.html"><img src="img/cb80cd16-f30b-4e1b-9b9b-19ca06aeaa86.jpg" alt="Control DualSense PS5 (camuflado)" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-dualsense-camuflado.html">Control DualSense PS5 (camuflado)</a></h3>
@@ -137,7 +154,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20DualSense%20PS5%20%28camuflado%29%20%28%24429.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-dualsense-spiderman-2.html"><img src="img/6a37f81c-5e28-43ee-ab77-5871e990decc.jpg" alt="Control DualSense PS5 · Edición Spider-Man 2" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-dualsense-spiderman-2.html">Control DualSense PS5 · Edición Spider-Man 2</a></h3>
@@ -145,7 +162,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20DualSense%20PS5%20%C2%B7%20Edici%C3%B3n%20Spider-Man%202%20%28%24429.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-xbox.html"><img src="img/7d800835-a55e-4fbf-ac1c-0822aa674ec8.jpg" alt="Control inalámbrico Xbox" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-xbox.html">Control inalámbrico Xbox</a></h3>
@@ -153,7 +170,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20inal%C3%A1mbrico%20Xbox%20%28%24349.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-xbox-elite-series-2.html"><img src="img/873d9ddc-46a7-4c0e-95a1-ba31918d1260.jpg" alt="Control Xbox Elite Series 2 (blanco)" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-xbox-elite-series-2.html">Control Xbox Elite Series 2 (blanco)</a></h3>
@@ -161,7 +178,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20Xbox%20Elite%20Series%202%20%28blanco%29%20%28%24699.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-xbox-elite-series-2-core.html"><img src="img/9d70ceb0-4280-44d6-9cf0-400f30849b48.jpg" alt="Control Xbox Elite Series 2 Core (negro)" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-xbox-elite-series-2-core.html">Control Xbox Elite Series 2 Core (negro)</a></h3>
@@ -169,7 +186,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20Xbox%20Elite%20Series%202%20Core%20%28negro%29%20%28%24649.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Audífonos">
         <a class="foto-producto" href="audifonos-xbox.html"><img src="img/6c9d6fb0-c710-440a-83f9-d51b6e09cc51.jpg" alt="Audífonos inalámbricos Xbox" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="audifonos-xbox.html">Audífonos inalámbricos Xbox</a></h3>
@@ -177,7 +194,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Aud%C3%ADfonos%20inal%C3%A1mbricos%20Xbox%20%28%24549.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-compatible-ps4.html"><img src="img/552d82eb-01ab-4403-8829-763fae2e7f7f.jpg" alt="Control inalámbrico compatible PS4" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-compatible-ps4.html">Control inalámbrico compatible PS4</a></h3>
@@ -185,7 +202,7 @@
           <a class="boton" href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20comprar%3A%20Control%20inal%C3%A1mbrico%20compatible%20PS4%20%28%2489.900%29." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z"/></svg>Comprar por WhatsApp</a>
         </div>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="Control">
         <a class="foto-producto" href="control-dualshock-4.html"><img src="img/ff97c29c-9530-4111-bb07-e2153ff7c556.jpg" alt="Control DualShock 4 PS4 (negro)" loading="lazy" decoding="async"></a>
         <div class="info">
           <h3><a href="control-dualshock-4.html">Control DualShock 4 PS4 (negro)</a></h3>
@@ -194,6 +211,7 @@
         </div>
       </article>
     </div>
+    <p class="sin-resultados" id="sin-resultados" hidden>No tenemos productos en esta categoría todavía. <a href="https://wa.me/573202082977?text=Hola%20Change%20of%20Games%2C%20quiero%20consultar%20por%20un%20producto." target="_blank" rel="noopener">Pregúntanos por WhatsApp</a>.</p>
   </div>
 </section>
 

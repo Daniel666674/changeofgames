@@ -87,3 +87,35 @@
     if (e.key === 'ArrowRight') mostrar(indice + 1);
   });
 })();
+
+/* Tienda: filtrar productos por categoría. */
+(function () {
+  var filtros = document.getElementById('filtros');
+  var tienda = document.getElementById('tienda');
+  if (!filtros || !tienda) return;
+
+  var chips = Array.prototype.slice.call(filtros.querySelectorAll('.chip'));
+  var productos = Array.prototype.slice.call(tienda.querySelectorAll('.producto'));
+  var sinResultados = document.getElementById('sin-resultados');
+
+  function filtrar(valor) {
+    var visibles = 0;
+    productos.forEach(function (producto) {
+      var coincide = valor === 'todos' || producto.getAttribute('data-categoria') === valor;
+      producto.hidden = !coincide;
+      if (coincide) visibles++;
+    });
+    if (sinResultados) sinResultados.hidden = visibles !== 0;
+    chips.forEach(function (chip) {
+      var activo = chip.getAttribute('data-filtro') === valor;
+      chip.classList.toggle('activo', activo);
+      chip.setAttribute('aria-pressed', activo ? 'true' : 'false');
+    });
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      filtrar(chip.getAttribute('data-filtro'));
+    });
+  });
+})();
