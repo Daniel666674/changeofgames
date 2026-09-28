@@ -1,0 +1,298 @@
+[
+  {
+    "slug": "playstation-5",
+    "name": "PlayStation 5",
+    "cat": "Consola",
+    "price": "$2.499.900",
+    "desc": "La PlayStation 5 con lector de disco, lista para tus juegos favoritos en 4K. Viene con un control DualSense incluido.",
+    "imgs": [
+      "img/122bd800-77e7-4d29-a37b-c95b49364a4b.jpg",
+      "img/ba546cd8-9d31-47d7-8ef9-e057fabfb588.jpg"
+    ],
+    "incluye": [
+      "SSD ultrarrápido de 825 GB",
+      "Soporta juegos y discos en 4K Ultra HD",
+      "Incluye un control inalámbrico DualSense",
+      "Retrocompatible con la mayoría de juegos de PS4"
+    ]
+  },
+  {
+    "slug": "playstation-5-hub-usb",
+    "name": "PlayStation 5 + base con hub USB",
+    "cat": "Consola",
+    "price": "$2.699.900",
+    "desc": "La misma PlayStation 5, acostada sobre una base de enfriamiento horizontal con un hub USB para conectar más accesorios sin enredos de cables.",
+    "imgs": [
+      "img/d7b2c313-ddb9-4fe3-a463-bd3f74243330.jpg"
+    ],
+    "incluye": [
+      "SSD ultrarrápido de 825 GB",
+      "Incluye base de enfriamiento horizontal",
+      "Hub con puertos USB adicionales",
+      "Incluye un control inalámbrico DualSense"
+    ]
+  },
+  {
+    "slug": "xbox-series-x",
+    "name": "Xbox Series X",
+    "cat": "Consola",
+    "price": "$2.399.900",
+    "desc": "La consola más potente de Xbox: juegos en 4K nativo hasta 120 fps y tiempos de carga casi instantáneos.",
+    "imgs": [
+      "img/1f68ad1a-35a1-4e7f-af75-7a72c74c7367.jpg",
+      "img/7470b011-0235-4c06-9602-773ceeb55a0b.jpg",
+      "img/ccfea0f4-24b1-4f75-b7ac-3c7f6f12674b.jpg"
+    ],
+    "incluye": [
+      "1 TB de almacenamiento SSD",
+      "Juegos hasta 4K y 120 fps",
+      "Incluye un control inalámbrico Xbox",
+      "Compatible con miles de juegos de generaciones anteriores"
+    ]
+  },
+  {
+    "slug": "xbox-series-x-edicion-limitada",
+    "name": "Xbox Series X Edición Limitada",
+    "cat": "Consola",
+    "price": "$2.599.900",
+    "desc": "La misma potencia de la Series X, en una edición especial con acabados distintos para quienes quieren algo diferente.",
+    "imgs": [
+      "img/680e57be-d688-4080-a77d-826a2f2ee2a0.jpg"
+    ],
+    "incluye": [
+      "1 TB de almacenamiento SSD",
+      "Juegos hasta 4K y 120 fps",
+      "Acabado de edición limitada",
+      "Incluye un control inalámbrico Xbox"
+    ]
+  },
+  {
+    "slug": "xbox-series-s",
+    "name": "Xbox Series S",
+    "cat": "Consola",
+    "price": "$1.499.900",
+    "desc": "La opción compacta de Xbox: todo el catálogo de juegos de nueva generación, en un tamaño más pequeño y a menor precio. Disponible en negro y blanco.",
+    "imgs": [
+      "img/98a2825f-ee8b-4576-b7fa-15a7480c7faf.jpg",
+      "img/d3925748-f142-472f-8a0c-d62c63049473.jpg"
+    ],
+    "incluye": [
+      "Almacenamiento SSD de 512 GB a 1 TB según modelo",
+      "Juegos hasta 1440p a 120 fps",
+      "100% digital, sin lector de disco",
+      "Incluye un control inalámbrico Xbox"
+    ]
+  },
+  {
+    "slug": "nintendo-switch",
+    "name": "Nintendo Switch",
+    "cat": "Consola",
+    "price": "$1.299.900",
+    "desc": "Juega en la tele, en modo sobremesa o portátil. La Switch se adapta a donde estés, con sus Joy-Con incluidos.",
+    "imgs": [
+      "img/3e18d4f3-05dc-426b-acea-a320eca15b04.jpg",
+      "img/c6983003-43e0-4fe1-939f-e8a5e83df93b.jpg",
+      "img/cb77f23f-3785-434d-aac6-c4966dfb6b7e.jpg"
+    ],
+    "incluye": [
+      "Pantalla de 6.2 pulgadas",
+      "Incluye dos mandos Joy-Con",
+      "Modo TV, sobremesa y portátil",
+      "Hasta 6.5 horas de batería según el juego"
+    ]
+  },
+  {
+    "slug": "playstation-4-slim",
+    "name": "PlayStation 4 Slim",
+    "cat": "Consola",
+    "price": "$1.199.900",
+    "desc": "La PlayStation 4 en su versión Slim: más delgada, silenciosa y con un catálogo enorme de juegos ya consolidado. Incluye un control DualShock 4.",
+    "imgs": [
+      "img/ae0ecc8f-9b37-4b0d-a136-ed9568defed2.jpg"
+    ],
+    "incluye": [
+      "1 TB de almacenamiento",
+      "Lector de discos Blu-ray/DVD",
+      "Incluye un control DualShock 4",
+      "Compatible con la mayoría de accesorios de PS4"
+    ]
+  },
+  {
+    "slug": "xbox-one-s",
+    "name": "Xbox One S",
+    "cat": "Consola",
+    "price": "$999.900",
+    "desc": "Una consola confiable con años de catálogo detrás, ideal si buscas empezar a jugar sin gastar tanto. Incluye un control inalámbrico.",
+    "imgs": [
+      "img/bdeb9dff-286d-4767-8537-f9da5c85b6cd.jpg"
+    ],
+    "incluye": [
+      "1 TB de almacenamiento",
+      "Soporta video en 4K y HDR",
+      "Incluye un control inalámbrico Xbox",
+      "Amplio catálogo de juegos de Xbox One"
+    ]
+  },
+  {
+    "slug": "control-dualsense-negro",
+    "name": "Control DualSense PS5 (negro medianoche)",
+    "cat": "Control",
+    "price": "$379.900",
+    "desc": "El control oficial de PlayStation 5, con gatillos adaptables y retroalimentación háptica que se siente distinto en cada juego.",
+    "imgs": [
+      "img/98239718-8c9b-42d4-9835-1d1d68dedd41.jpg"
+    ],
+    "incluye": [
+      "Compatible con PlayStation 5",
+      "Gatillos adaptables y vibración háptica",
+      "Batería recargable por USB-C",
+      "Conexión inalámbrica Bluetooth"
+    ]
+  },
+  {
+    "slug": "control-dualsense-blanco",
+    "name": "Control DualSense PS5 (blanco)",
+    "cat": "Control",
+    "price": "$379.900",
+    "desc": "El control oficial de PlayStation 5, con gatillos adaptables y retroalimentación háptica que se siente distinto en cada juego.",
+    "imgs": [
+      "img/b1ddb0ec-ac0d-4758-bd5f-0c2a08fdcad8.jpg"
+    ],
+    "incluye": [
+      "Compatible con PlayStation 5",
+      "Gatillos adaptables y vibración háptica",
+      "Batería recargable por USB-C",
+      "Conexión inalámbrica Bluetooth"
+    ]
+  },
+  {
+    "slug": "control-dualsense-camuflado",
+    "name": "Control DualSense PS5 (camuflado)",
+    "cat": "Control",
+    "price": "$429.900",
+    "desc": "El control oficial de PlayStation 5, en un diseño camuflado. Mismos gatillos adaptables y retroalimentación háptica del DualSense clásico.",
+    "imgs": [
+      "img/cb80cd16-f30b-4e1b-9b9b-19ca06aeaa86.jpg"
+    ],
+    "incluye": [
+      "Compatible con PlayStation 5",
+      "Gatillos adaptables y vibración háptica",
+      "Batería recargable por USB-C",
+      "Conexión inalámbrica Bluetooth"
+    ]
+  },
+  {
+    "slug": "control-dualsense-spiderman-2",
+    "name": "Control DualSense PS5 · Edición Spider-Man 2",
+    "cat": "Control",
+    "price": "$429.900",
+    "desc": "Edición especial inspirada en Marvel's Spider-Man 2, con el mismo control DualSense de siempre y un diseño exclusivo para coleccionistas y fans.",
+    "imgs": [
+      "img/6a37f81c-5e28-43ee-ab77-5871e990decc.jpg"
+    ],
+    "incluye": [
+      "Compatible con PlayStation 5",
+      "Diseño exclusivo edición Spider-Man 2",
+      "Gatillos adaptables y vibración háptica",
+      "Batería recargable por USB-C"
+    ]
+  },
+  {
+    "slug": "control-xbox",
+    "name": "Control inalámbrico Xbox",
+    "cat": "Control",
+    "price": "$349.900",
+    "desc": "El control estándar de Xbox, cómodo para sesiones largas y compatible con consola, PC y celular. Disponible en varios colores.",
+    "imgs": [
+      "img/7d800835-a55e-4fbf-ac1c-0822aa674ec8.jpg",
+      "img/98f3554e-71e4-4410-9934-134ca6dfb2d3.jpg"
+    ],
+    "incluye": [
+      "Compatible con Xbox Series X|S, Xbox One, PC y celular",
+      "Conexión inalámbrica o por cable",
+      "Grip texturizado en las empuñaduras",
+      "Funciona con pilas AA o batería recargable (se vende por separado)"
+    ]
+  },
+  {
+    "slug": "control-xbox-elite-series-2",
+    "name": "Control Xbox Elite Series 2 (blanco)",
+    "cat": "Control",
+    "price": "$699.900",
+    "desc": "El control premium de Xbox, pensado para jugadores competitivos: palancas y gatillos ajustables, con piezas intercambiables.",
+    "imgs": [
+      "img/873d9ddc-46a7-4c0e-95a1-ba31918d1260.jpg"
+    ],
+    "incluye": [
+      "Palancas y cruceta intercambiables",
+      "Paletas traseras removibles",
+      "Gatillos con tope ajustable",
+      "Batería recargable de hasta 40 horas"
+    ]
+  },
+  {
+    "slug": "control-xbox-elite-series-2-core",
+    "name": "Control Xbox Elite Series 2 Core (negro)",
+    "cat": "Control",
+    "price": "$649.900",
+    "desc": "La versión Core del Elite Series 2: la misma sensación premium, con un set más simple de componentes incluidos.",
+    "imgs": [
+      "img/9d70ceb0-4280-44d6-9cf0-400f30849b48.jpg"
+    ],
+    "incluye": [
+      "Palancas intercambiables",
+      "Gatillos con tope ajustable",
+      "Se conecta por cable USB-C o Bluetooth",
+      "Compatible con Xbox Series X|S, Xbox One y PC"
+    ]
+  },
+  {
+    "slug": "audifonos-xbox",
+    "name": "Audífonos inalámbricos Xbox",
+    "cat": "Audífonos",
+    "price": "$549.900",
+    "desc": "Sonido envolvente inalámbrico para tus partidas, con micrófono integrado y varias horas de batería.",
+    "imgs": [
+      "img/6c9d6fb0-c710-440a-83f9-d51b6e09cc51.jpg"
+    ],
+    "incluye": [
+      "Conexión inalámbrica directa a consola Xbox",
+      "Micrófono con cancelación de ruido",
+      "Hasta 20 horas de batería",
+      "Controles de volumen y chat en el audífono"
+    ]
+  },
+  {
+    "slug": "control-compatible-ps4",
+    "name": "Control inalámbrico compatible PS4",
+    "cat": "Control",
+    "price": "$89.900",
+    "desc": "Control inalámbrico compatible con PS4, con la misma disposición de botones que el original. Una opción económica para tener un segundo control a la mano.",
+    "imgs": [
+      "img/552d82eb-01ab-4403-8829-763fae2e7f7f.jpg",
+      "img/cd71c852-4ca0-4add-bded-b4a5f83724d3.jpg"
+    ],
+    "incluye": [
+      "Compatible con PlayStation 4",
+      "Conexión inalámbrica Bluetooth",
+      "Incluye cable USB de carga",
+      "Producto compatible, no es de marca Sony"
+    ]
+  },
+  {
+    "slug": "control-dualshock-4",
+    "name": "Control DualShock 4 PS4 (negro)",
+    "cat": "Control",
+    "price": "$259.900",
+    "desc": "El control original de PlayStation 4, con touchpad y barra de luz. Ideal si buscas el repuesto oficial para tu consola.",
+    "imgs": [
+      "img/ff97c29c-9530-4111-bb07-e2153ff7c556.jpg"
+    ],
+    "incluye": [
+      "Compatible con PlayStation 4",
+      "Touchpad y barra de luz",
+      "Conexión inalámbrica Bluetooth",
+      "Batería recargable por micro-USB"
+    ]
+  }
+]
